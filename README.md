@@ -1,1 +1,1 @@
-# My-rep
+# Simple Auth Service
