@@ -1,7 +1,12 @@
 const { findUser } = require("./users");
 
 function login(username, password) {
+  if (typeof password !== "string" || password.length < 8) {
+  return { success: false, message: "Password must be at least 8 characters" };
+}
   const user = findUser(username);
+  
+
 
   if (!user) {
     return { success: false, message: "User not found" };
