@@ -4,11 +4,11 @@ function login(username, password) {
   const user = findUser(username);
 
   if (!user) {
-    return { success: false, message: "User not found" };
+    return { success: false, message: "Invalid credentials" };
   }
 
   if (user.password !== password) {
-    return { success: false, message: "Invalid password" };
+    return { success: false, message: "Invalid credentials" };
   }
 
   return {
