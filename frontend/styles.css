@@ -1,0 +1,22 @@
+body{margin:0;font-family:Arial,sans-serif;background:#f3f5f9;color:#16233a}
+*{box-sizing:border-box}
+.layout{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+.sidebar{background:#101a2b;color:#fff;padding:16px}
+.sidebar a{display:block;color:#d2d9e6;text-decoration:none;padding:8px;border-radius:6px;margin-bottom:4px}
+.sidebar a:hover,.sidebar a.active{background:#1f2f4d;color:#fff}
+.content{padding:16px}
+.card{background:#fff;border:1px solid #d8e0ef;border-radius:10px;padding:14px;margin-bottom:12px}
+.grid{display:grid;gap:10px}
+.grid.two{grid-template-columns:1fr 1fr}
+input,select,textarea,button{padding:8px;border:1px solid #c7d1e4;border-radius:6px}
+button{background:#1e58f3;color:#fff;border:none;cursor:pointer}
+button.secondary{background:#5c6f93}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:8px;border-bottom:1px solid #e8edf6;text-align:left;font-size:13px}
+.kiosk .scan-input{font-size:28px;padding:16px;width:100%}
+.kiosk button{font-size:18px;padding:14px}
+.flash-ok{animation:ok .35s}
+.flash-err{animation:err .35s}
+@keyframes ok{from{background:#b8f3d1}to{background:transparent}}
+@keyframes err{from{background:#ffc5c5}to{background:transparent}}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:sticky;top:0}}
